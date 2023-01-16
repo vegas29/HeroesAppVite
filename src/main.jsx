@@ -5,6 +5,8 @@ import './styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HeroesApp />
+    <BrowserRouter>
+      <HeroesApp />
+    </BrowserRouter>
   </React.StrictMode>,
 );
