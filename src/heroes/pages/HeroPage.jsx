@@ -1,4 +1,6 @@
+import { useMemo } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { getHeroById } from "../helpers";
 
 export const HeroPage = () => {
     const { heroeId } = useParams();
@@ -34,7 +36,7 @@ export const HeroPage = () => {
                     <div className="rounded-md overflow-hidden md:row-start-1 md:row-end-5">
                         {/* <img className="h-96 w-full object-cover mx-auto rounded-md hover:scale-105 transition-all cursor-pointer animate__animated animate__fadeInDown" src={imagenPath} alt={superhero}/> */}
 
-                        <img className="h-96 w-full object-cover mx-auto rounded-md hover:scale-105 transition-all cursor-pointer animate__animated animate__fadeInDown" src={heroImages(`./${heroeId}.jpg`)} alt={superhero}/>
+                        <img className="h-96 w-full object-cover mx-auto rounded-md hover:scale-105 transition-all cursor-pointer animate__animated animate__fadeInDown" src={imagenPath} alt={superhero}/>
                     </div>{/*Imagen*/}
                     
                     <p className="font-semibold mt-5 text-lg md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-2 md:mt-20 animate__animated animate__fadeInRight">Name: <span className="font-normal">{alter_ego}</span></p>
