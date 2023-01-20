@@ -1,6 +1,21 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 export const Navbar = () => {
+
+    const navigate = useNavigate();
+
+    const handleLogout = () =>{
+
+        // const action = {
+        //     type: types.logout
+        // }
+
+        // dispatch(action)
+        
+        navigate('/login', {
+            replace: true
+        });
+    }
 
     return (
         <nav className="bg-blue-500 p-4 shadow-lg text-white text-xl">
@@ -43,7 +58,7 @@ export const Navbar = () => {
                         </span>
                         <button
                             className="hover:bg-blue-600 py-2 px-3 hover:px-3 hover:py-2 hover:rounded-lg"
-                            // onClick={handleLogout}
+                            onClick={handleLogout}
                         >
                             <i className="fa-solid fa-right-from-bracket"></i>
                         </button>
