@@ -11,7 +11,7 @@ export const Navbar = () => {
     const handleLogout = () =>{
 
         logout();
-        
+
         navigate('/login', {
             replace: true
         });
@@ -23,7 +23,7 @@ export const Navbar = () => {
             <div className="container mx-auto flex flex-col md:flex-row items-center  gap-5 ">
                 <Link 
                     className="navbar-brand" 
-                    to="/"
+                    to="#"
                 >
                     Asociaciones
                 </Link>
