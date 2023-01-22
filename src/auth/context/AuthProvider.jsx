@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
 
     const login = ( name = '' ) => {
 
-        const user = { id: 'ABC', name };
+        const user = { id: crypto.randomUUID(), name };
 
         const action = {
             type: types.login,
