@@ -1,6 +1,10 @@
+import { useContext } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../auth/context/AuthContext';
 
 export const Navbar = () => {
+
+    const { user } = useContext(AuthContext);
 
     const navigate = useNavigate();
 
@@ -54,7 +58,7 @@ export const Navbar = () => {
                 <div className="flex gap-2 md:justify-end md:w-full">
                     <ul className="flex items-center gap-5">
                         <span className="font-semibold">
-                            Bienvenido Alejandro
+                            Bienvenido {user?.name}
                         </span>
                         <button
                             className="hover:bg-blue-600 py-2 px-3 hover:px-3 hover:py-2 hover:rounded-lg"
