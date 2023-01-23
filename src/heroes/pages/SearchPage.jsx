@@ -39,25 +39,26 @@ export const SearchPage = () => {
                 <div className="text-center py-7 md:py-10 md:w-5/12 mx-auto px-5">
                     <form
                         onSubmit={handleSubmit}
+                        aria-label="form"
                     >
                         <span className="font-semibold text-md my-2 block">
                             Inserte el nombre del héroe
                         </span>
         
                         <input
-                        type="text"
-                        placeholder="Buscar un héroe"
-                        className="w-full px-5 rounded-md shadow-sm h-12 bg-gray-100"
-                        autoComplete="false"
-                        name="searchText"
-                        value={searchText}
-                        onChange={handleInputChange}
+                            type="text"
+                            placeholder="Buscar un héroe"
+                            className="w-full px-5 rounded-md shadow-sm h-12 bg-gray-100"
+                            autoComplete="false"
+                            name="searchText"
+                            value={searchText}
+                            onChange={handleInputChange}
                         />
         
                         <input
-                        type="submit"
-                        value="Buscar"
-                        className="w-full  bg-blue-500 hover:bg-blue-600 text-white cursor-pointer mt-5 py-2 rounded-md text-md font-semibold"
+                            type="submit"
+                            value="Buscar"
+                            className="w-full  bg-blue-500 hover:bg-blue-600 text-white cursor-pointer mt-5 py-2 rounded-md text-md font-semibold"
                         />
                     </form>
                 </div>
@@ -74,7 +75,7 @@ export const SearchPage = () => {
                     Busca un heroe, para que se muestre aquí
                 </div>
                 : (heroesFiltered.length === 0)
-                    && <div className="bg-red-600 text-white text-center text-2xl font-bold shadow-lg rounded-lg w-full md:w-5/12 mx-auto py-10 mt-5">
+                    && <div aria-label="alert-danger" className="bg-red-600 text-white text-center text-2xl font-bold shadow-lg rounded-lg w-full md:w-5/12 mx-auto py-10 mt-5">
                         No hay resultados de {q}
                     </div>
             }

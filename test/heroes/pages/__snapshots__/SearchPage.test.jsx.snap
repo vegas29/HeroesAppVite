@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <SearchPage /> Debe de mostrarse correctamente con valores por defecto 1`] = `
+<div>
+  <h1
+    class="text-center font-bold mt-10 text-2xl"
+  >
+     Busquedas 
+  </h1>
+  <div
+    class="bg-white shadow-md rounded-md"
+  >
+    <div
+      class="text-center py-7 md:py-10 md:w-5/12 mx-auto px-5"
+    >
+      <form
+        aria-label="form"
+      >
+        <span
+          class="font-semibold text-md my-2 block"
+        >
+          Inserte el nombre del héroe
+        </span>
+        <input
+          autocomplete="false"
+          class="w-full px-5 rounded-md shadow-sm h-12 bg-gray-100"
+          name="searchText"
+          placeholder="Buscar un héroe"
+          type="text"
+          value=""
+        />
+        <input
+          class="w-full  bg-blue-500 hover:bg-blue-600 text-white cursor-pointer mt-5 py-2 rounded-md text-md font-semibold"
+          type="submit"
+          value="Buscar"
+        />
+      </form>
+    </div>
+  </div>
+  <h2
+    class="text-center font-bold mt-10 text-2xl"
+  >
+    Resultados
+  </h2>
+  <div
+    class="bg-white text-gray-400 text-center text-2xl font-bold shadow-lg rounded-lg w-full md:w-5/12 mx-auto py-10 mt-5"
+  >
+    Busca un heroe, para que se muestre aquí
+  </div>
+  <div
+    class="text-center py-7 md:py-10 md:max-w-7xl mx-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-5"
+  />
+</div>
+`;
